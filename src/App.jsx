@@ -4,6 +4,11 @@ import Dashboard from './pages/Dashboard';
 import AddExpense from './pages/AddExpense';
 import EditExpensePage from "./pages/EditExpensePage";
 
+const BASE_URL = import.meta.env.VITE_API_URL;
+
+fetch(`${BASE_URL}/api/expenses`)
+  .then(res => res.json())
+  .then(data => console.log(data));
 export default function App() {
   return (
    <BrowserRouter>
