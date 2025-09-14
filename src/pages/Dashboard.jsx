@@ -7,15 +7,15 @@ import CategoryChart from '../components/CategoryChart';
 import AddExpenseForm from '../components/AddExpenseForm';
 
 export default function Dashboard() {
+  const BASE_URL = import.meta.env.VITE_API_URL;
   const [expenses, setExpenses] = useState([]);
   const [summary, setSummary] = useState([]);
   const [chartData, setChartData] = useState(null);
 
   const fetchExpenses = async (category = '') => {
-  const res = await axios.get(`http://localhost:5000/api/expenses${category ? `?category=${category}` : ''}`);
+  const res = await axios.get(`${BASE_URL}/api/expenses${category ? `?category=${category}` : ''}`);
   setExpenses(res.data);
-
-  const summaryRes = await axios.get('http://localhost:5000/api/expenses/summary');
+  const summaryRes = await axios.get(`${BASE_URL}/api/expenses/summary`);
   setSummary(summaryRes.data);
 
   const labels = summaryRes.data.map((item) => item._id);
@@ -37,7 +37,7 @@ export default function Dashboard() {
 
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:5000/api/expenses/${id}`);
+    await axios.delete(`${BASE_URL}/api/expenses/${id}`);
     fetchExpenses();
   };
 
