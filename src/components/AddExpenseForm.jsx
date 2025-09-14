@@ -13,13 +13,16 @@ export default function AddExpenseForm({ onAdd }) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    await axios.post('http://localhost:5000/api/expenses', formData);
-    setFormData({ title: '', amount: '', category: '', date: '' });
+  const BASE_URL = import.meta.env.VITE_API_URL;
 
-    if (onAdd) onAdd(); // ✅ Trigger re-fetch after adding
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  await axios.post(`${BASE_URL}/api/expenses`, formData);
+  setFormData({ title: '', amount: '', category: '', date: '' });
+
+  if (onAdd) onAdd(); // ✅ Trigger re-fetch after adding
+};
+
 
   return (
     <form onSubmit={handleSubmit} style={{ padding: '1rem', borderRadius: '0.5rem' }}>

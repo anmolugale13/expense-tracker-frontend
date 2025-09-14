@@ -12,36 +12,35 @@ export default function EditExpensePage() {
     date: ''
   });
 
-  useEffect(() => {
-    axios.get(`http://localhost:5000/api/expenses`)
-      .then(res => {
-        const expense = res.data.find(e => e._id === id);
-        if (expense) {
-          setFormData({
-            title: expense.title,
-            amount: expense.amount,
-            category: expense.category,
-            date: expense.date.slice(0, 10)
-          });
-        }
-      })
-      .catch(err => console.error('Fetch error:', err));
-  }, [id]);
+ const BASE_URL = import.meta.env.VITE_API_URL;
 
-  const handleChange = (e) => {
-    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
-  };
+useEffect(() => {
+  axios.get(`${BASE_URL}/api/expenses`)
+    .then(res => {
+      const expense = res.data.find(e => e._id === id);
+      if (expense) {
+        setFormData({
+          title: expense.title,
+          amount: expense.amount,
+          category: expense.category,
+          date: expense.date.slice(0, 10)
+        });
+      }
+    })
+    .catch(err => console.error('Fetch error:', err));
+}, [id]);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      await axios.delete(`http://localhost:5000/api/expenses/${id}`);
-      await axios.post(`http://localhost:5000/api/expenses`, formData);
-      navigate('/');
-    } catch (err) {
-      console.error('Update error:', err);
-    }
-  };
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    await axios.delete(`${BASE_URL}/api/expenses/${id}`);
+    await axios.post(`${BASE_URL}/api/expenses`, formData);
+    navigate('/');
+  } catch (err) {
+    console.error('Update error:', err);
+  }
+};
+
 
   return (
   <div

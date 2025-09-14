@@ -64,14 +64,21 @@ export default function Dashboard() {
   }}
 >
   <div className="d-flex justify-content-between align-items-center">
-    <h1 className="h3 fw-bold" style={{ color: '#0f1518ff' }}>Expense Tracker</h1>
-    <div className="d-flex flex-nowrap gap-2">
-  <a href="#add-expense" className="btn btn-dark px-3 py-1 small">Add</a>
-  <a href="#expense-list" className="btn btn-dark px-2 py-1 small">List</a>
-  <a href="#summary" className="btn btn-dark px-3 py-1 small">Summary</a>
-  <a href="#graph" className="btn btn-dark px-2 py-1 small">Graph</a>
-</div>
+  <h1 className="h3 fw-bold" style={{ color: '#0f1518ff' }}>Expense Tracker</h1>
+  <div className="d-flex flex-wrap gap-2 justify-content-center" style={{ maxWidth: '100%' }}>
+    <a
+      href="#add-expense"
+      className="btn btn-dark px-3 py-1 small"
+      style={{ color: '#ffffff' }}
+    >
+      ➕
+    </a>
+    <a href="#expense-list" className="btn btn-dark px-2 py-1 small">🗒️</a>
+    <a href="#summary" className="btn btn-dark px-3 py-1 small">📋</a>
+    <a href="#graph" className="btn btn-dark px-2 py-1 small">📊</a>
   </div>
+</div>
+
 </section>
 
 
