@@ -3,6 +3,12 @@ import { useNavigate } from 'react-router-dom';
 
 export default function ExpenseCard({ expense, onDelete }) {
   const navigate = useNavigate();
+  const handleDelete = () => {
+  const confirmDelete = window.confirm("Are you sure you want to delete this expense?");
+  if (confirmDelete) {
+    onDelete(expense._id);
+  }
+};
 
   return (
     <div className="d-flex justify-content-between align-items-center bg-white border-bottom rounded px-3 py-2 shadow-sm w-100 mx-auto mb-2" style={{ maxWidth: '97%' }}>
@@ -26,16 +32,17 @@ export default function ExpenseCard({ expense, onDelete }) {
           Edit
         </button>
         <button
-          onClick={() => onDelete(expense._id)}
-          className="btn btn-sm"
-          style={{
-            backgroundColor: '#e3f2fd',
-            color: '#0000a0',
-            border: '1px solid #bbdefb'
-          }}
-        >
-          Delete
-        </button>
+  onClick={handleDelete}
+  className="btn btn-sm"
+  style={{
+    backgroundColor: '#e3f2fd',
+    color: '#0000a0',
+    border: '1px solid #bbdefb'
+  }}
+>
+  Delete
+</button>
+
       </div>
     </div>
   );
