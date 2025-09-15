@@ -82,16 +82,22 @@ Hosted on Render as a static site. Auto-deploys on every push to master.
 
 
 
+
 ## 🌐 Environment Variables
 
 Create a `.env` file in the root of the frontend project:
 
+env
+(VITE_API_URL=https://your-backend-url.onrender.com)
+
 
 ## 📦 Installation
+
 ```bash
 git clone https://github.com/anmolugale13/expense-tracker-frontend.git
 cd expense-tracker-frontend
 npm install
 npm run dev
+
 
 
