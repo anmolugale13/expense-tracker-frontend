@@ -11,10 +11,38 @@ export default function Dashboard() {
   const [expenses, setExpenses] = useState([]);
   const [summary, setSummary] = useState([]);
   const [chartData, setChartData] = useState(null);
+  const [stats, setStats] = useState({ total: 0, month: 0, avg: 0 });
 
-  const fetchExpenses = async (category = '') => {
-  const res = await axios.get(`${BASE_URL}/api/expenses${category ? `?category=${category}` : ''}`);
+  const fetchExpenses = async (category = '', time = '') => {
+  let query = '';
+  if (category) query += `category=${category}`;
+  if (time) query += `${query ? '&' : ''}time=${time}`;
+
+  const res = await axios.get(`${BASE_URL}/api/expenses${query ? `?${query}` : ''}`);
   setExpenses(res.data);
+  const totalAmount = res.data.reduce((sum, exp) => sum + exp.amount, 0);
+
+const currentMonth = new Date().getMonth();
+const currentYear = new Date().getFullYear();
+
+const monthExpenses = res.data.filter((exp) => {
+  const expDate = new Date(exp.date);
+  return expDate.getMonth() === currentMonth && expDate.getFullYear() === currentYear;
+});
+
+const monthAmount = monthExpenses.reduce((sum, exp) => sum + exp.amount, 0);
+
+const today = new Date();
+const daysInMonth = today.getDate();
+const avgPerDay = daysInMonth > 0 ? (monthAmount / daysInMonth).toFixed(2) : 0;
+
+setStats({
+  total: totalAmount,
+  month: monthAmount,
+  avg: avgPerDay
+});
+
+
   const summaryRes = await axios.get(`${BASE_URL}/api/expenses/summary`);
   setSummary(summaryRes.data);
 
@@ -34,6 +62,7 @@ export default function Dashboard() {
     ],
   });
 };
+
 
 
   const handleDelete = async (id) => {
@@ -118,6 +147,21 @@ export default function Dashboard() {
                 >
               <h2 className="h5 fw-semibold mb-3" style={{ color: '#071d53ff' }}>Chart</h2>
               <CategoryChart chartData={chartData} />
+              <div className="d-flex justify-content-around text-center mt-3 flex-wrap">
+  <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
+    <div className="fw-bold text-secondary small">🧮Total</div>
+    <div className="fs-6 text-dark">₹{stats.total}</div>
+  </div>
+  <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
+    <div className="fw-bold text-secondary small">📆This Month</div>
+    <div className="fs-6 text-dark">₹{stats.month}</div>
+  </div>
+  <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
+    <div className="fw-bold text-secondary small">📊Avg/Day</div>
+    <div className="fs-6 text-dark">₹{stats.avg}</div>
+  </div>
+</div>
+
              </section>
 
             </div>
