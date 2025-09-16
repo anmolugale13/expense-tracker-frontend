@@ -43,7 +43,7 @@ src/
 └── main.jsx
 
 
-🧪 Features
+## 🧪 Features
 
 Add new expenses with title, amount, category, and date
 
@@ -58,7 +58,7 @@ Summary section with total and category-wise stats
 Mobile-first design with elegant nude-tone styling
 
 
-🖼️ UI Highlights
+## 🖼️ UI Highlights
 
 Clean navigation bar with emoji icons
 
@@ -70,13 +70,13 @@ Responsive layout for mobile and desktop
 
 
 
-🧩 Backend Integration
+## 🧩 Backend Integration
 
 This frontend connects to the Expense Tracker Backend via REST API.
 
 
 
-📤 Deployment
+## 📤 Deployment
 
 Hosted on Render as a static site. Auto-deploys on every push to master.
 
