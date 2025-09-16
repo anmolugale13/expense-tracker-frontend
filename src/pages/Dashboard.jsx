@@ -113,105 +113,105 @@ setStats({
 
           <hr className="my-4 border-secondary" />
 
-          {/* 🔸 Top Row: Add Expense + Graph */}
-          <div className="row g-4 mb-4">
-            {/* Add Expense */}
-            <div className="col-md-6">
-  <section
-    id="add-expense"
-    style={{
-      backgroundImage: "url('https://img.freepik.com/premium-photo/aesthetic-trendy-pastel-background_87720-46574.jpg?w=2000')",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      padding: "1rem",
-      borderRadius: "0.5rem"
-    }}
-  >
-    <h2 className="h5 fw-semibold mb-3" style={{ color: '#2e0236ff' }}>Add Expense</h2>
-    <AddExpenseForm onAdd={fetchExpenses} />
-  </section>
-</div>
-            {/* Graph */}
-            <div className="col-md-6">
-              <section
-               id="graph"
-                style={{
-                backgroundImage: "url('https://png.pngtree.com/thumb_back/fh260/background/20220705/pngtree-light-blue-smoke-image_1417190.jpg')",
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat",
-                padding: "1rem",
-                borderRadius: "0.5rem"
-                }}
-                >
-              <h2 className="h5 fw-semibold mb-3" style={{ color: '#071d53ff' }}>Chart</h2>
-              <CategoryChart chartData={chartData} />
-              <div className="d-flex justify-content-around text-center mt-3 flex-wrap">
-  <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
-    <div className="fw-bold text-secondary small">🧮Total</div>
-    <div className="fs-6 text-dark">₹{stats.total}</div>
+          {/* 🔸 Top Row: Add Expense + Summary */}
+<div className="row g-4 mb-4">
+  {/* Add Expense */}
+  <div className="col-md-6">
+    <section
+      id="add-expense"
+      style={{
+        backgroundImage: "url('https://img.freepik.com/premium-photo/aesthetic-trendy-pastel-background_87720-46574.jpg?w=2000')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        padding: "1rem",
+        borderRadius: "0.5rem"
+      }}
+    >
+      <h2 className="h5 fw-semibold mb-3" style={{ color: '#2e0236ff' }}>Add Expense</h2>
+      <AddExpenseForm onAdd={fetchExpenses} />
+    </section>
   </div>
-  <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
-    <div className="fw-bold text-secondary small">📆This Month</div>
-    <div className="fs-6 text-dark">₹{stats.month}</div>
-  </div>
-  <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
-    <div className="fw-bold text-secondary small">📊Avg/Day</div>
-    <div className="fs-6 text-dark">₹{stats.avg}</div>
+
+  {/* Summary */}
+  <div className="col-md-6">
+    <section
+      id="summary"
+      style={{
+        backgroundImage: "url('https://i.pinimg.com/originals/f4/b9/fe/f4b9fe4e03a2ef397e496ab1cde8bb26.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        padding: "1rem",
+        borderRadius: "0.5rem"
+      }}
+    >
+      <h2 className="h5 fw-semibold mb-3" style={{ color: '#033b09ff' }}>Summary</h2>
+      <SummarySection summary={summary} />
+    </section>
   </div>
 </div>
 
-             </section>
 
-            </div>
-          </div>
+          {/* 🔸 Bottom Row: Chart + Expense List */}
+<div className="row g-4">
+  {/* Chart */}
+  <div className="col-md-6">
+    <section
+      id="graph"
+      style={{
+        backgroundImage: "url('https://png.pngtree.com/thumb_back/fh260/background/20220705/pngtree-light-blue-smoke-image_1417190.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        padding: "1rem",
+        borderRadius: "0.5rem"
+      }}
+    >
+      <h2 className="h5 fw-semibold mb-3" style={{ color: '#071d53ff' }}>Chart</h2>
+      <CategoryChart chartData={chartData} />
+      <div className="d-flex justify-content-around text-center mt-3 flex-wrap">
+        <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
+          <div className="fw-bold text-secondary small">🧮Total</div>
+          <div className="fs-6 text-dark">₹{stats.total}</div>
+        </div>
+        <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
+          <div className="fw-bold text-secondary small">📆This Month</div>
+          <div className="fs-6 text-dark">₹{stats.month}</div>
+        </div>
+        <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
+          <div className="fw-bold text-secondary small">📊Avg/Day</div>
+          <div className="fs-6 text-dark">₹{stats.avg}</div>
+        </div>
+      </div>
+    </section>
+  </div>
 
-          {/* 🔸 Bottom Row: Summary + Expense List */}
-          <div className="row g-4">
-            {/* Summary */}
-            <div className="col-md-6">
-              <section
-  id="summary"
-  style={{
-    backgroundImage: "url('https://i.pinimg.com/originals/f4/b9/fe/f4b9fe4e03a2ef397e496ab1cde8bb26.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    padding: "1rem",
-    borderRadius: "0.5rem"
-  }}
->
-  <h2 className="h5 fw-semibold mb-3" style={{ color: '#033b09ff' }}>Summary</h2>
-  <SummarySection summary={summary} />
-</section>
+  {/* Expense List */}
+  <div className="col-md-6">
+    <section
+      id="expense-list"
+      className="card shadow-sm"
+      style={{
+        backgroundImage: "url('https://static.vecteezy.com/system/resources/previews/002/937/816/original/watercolor-pastel-green-and-yellow-painted-texture-abstract-background-vector.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat"
+      }}
+    >
+      <div className="card-body bg-white bg-opacity-75 rounded">
+        <h2 className="h5 fw-semibold mb-3" style={{ color: '#3e3f07ff' }}>List</h2>
+        <FilterBar onFilter={fetchExpenses} />
+        <div className="mt-3">
+          {expenses.map((exp) => (
+            <ExpenseCard key={exp._id} expense={exp} onDelete={handleDelete} />
+          ))}
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
 
-            </div>
-
-            {/* Expense List */}
-            <div className="col-md-6">
-              <section
-                id="expense-list"
-                className="card shadow-sm"
-                style={{
-                  backgroundImage: "url('https://static.vecteezy.com/system/resources/previews/002/937/816/original/watercolor-pastel-green-and-yellow-painted-texture-abstract-background-vector.jpg  ')",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat"
-                }}
-              >
-                <div className="card-body bg-white bg-opacity-75 rounded">
-                  <h2 className="h5 fw-semibold mb-3" style={{ color: '#3e3f07ff' }}>List</h2>
-                  <FilterBar onFilter={fetchExpenses} />
-                  <div className="mt-3">
-                    {expenses.map((exp) => (
-                      <ExpenseCard key={exp._id} expense={exp} onDelete={handleDelete} />
-                    ))}
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
 
         </div>
       </div>
