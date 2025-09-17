@@ -91,7 +91,7 @@ setChartData({
           <section
   id="navbar"
   style={{
-    backgroundImage: "url('https://i.pinimg.com/originals/94/dd/17/94dd17e01daa1ceb63483e043d376350.jpg')",
+    backgroundImage: "url('https://wallpaperaccess.com/full/7194745.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -128,7 +128,7 @@ setChartData({
     <section
       id="add-expense"
       style={{
-        backgroundImage: "url('https://wallpaperaccess.com/full/4110648.jpg')",
+        backgroundImage: "url('https://wallpapers.com/images/hd/light-pink-background-bwuhuuvcaqs1owpg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -146,7 +146,7 @@ setChartData({
     <section
       id="summary"
       style={{
-        backgroundImage: "url('https://th.bing.com/th/id/R.eb2e3708d41035629ff80b27b73716fc?rik=Ea7q2iN1Ms%2bTeQ&riu=http%3a%2f%2fwww.scrappnsavvy.com%2fcdn%2fshop%2ffiles%2fScreenshot2024-03-27232819.png%3fv%3d1711600163&ehk=3G1lttRgCPAJewGqoD8Q194AQlUmlX8fvvI9RR%2f9GbM%3d&risl=&pid=ImgRaw&r=0g')",
+        backgroundImage: "url('https://wallpapers.com/images/hd/light-pink-background-bwuhuuvcaqs1owpg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -168,7 +168,7 @@ setChartData({
     <section
       id="graph"
       style={{
-        backgroundImage: "url('https://s-media-cache-ak0.pinimg.com/736x/d6/f0/b6/d6f0b62d743fd1efe28908d0e0340ea1.jpg')",
+        backgroundImage: "url('https://wallpapers.com/images/hd/light-pink-background-bwuhuuvcaqs1owpg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
