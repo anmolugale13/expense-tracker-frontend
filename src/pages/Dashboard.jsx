@@ -55,7 +55,7 @@ setStats({
       {
         data,
         backgroundColor: [
-          '#83b2d9ff', '#58d2a3ff', '#f3eb51ff', '#f3bb7bff', '#d98df2ff', '#f17b63ff'
+          '#f8b195', '#f67280', '#C06c84', '#6c5b7b', '#355c7d', '#76a8a1'
         ],
         borderWidth: 1,
       },
