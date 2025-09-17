@@ -44,6 +44,15 @@ src/
 └── main.jsx
 
 
+## 🧪 Components
+
+Expense List → Show all expenses in table or card view
+
+Add Expense Form → Input fields: title, amount, category, date
+
+Summary Section → Show total spent and breakdown by category
+
+
 ## 🧪 Features
 
 Add new expenses with title, amount, category, and date
@@ -51,6 +60,8 @@ Add new expenses with title, amount, category, and date
 View all expenses in a scrollable list
 
 Edit or delete existing entries
+
+Filter/search by category or date range
 
 Visualize category breakdown with a responsive chart
 
@@ -60,6 +71,8 @@ Mobile-first design with elegant nude-tone styling
 
 
 ## 🖼️ UI Highlights
+
+Styling with Bootstrap for clean UI
 
 Clean navigation bar with emoji icons
 
