@@ -105,14 +105,14 @@ setChartData({
         Expense Tracker
       </h1>
 
-      <div className="d-flex flex-wrap gap-2 justify-content-center" style={{ maxWidth: '100%' }}>
-  <a href="#add-expense" className="btn btn-dark px-3 py-1 small">➕</a>
-  <a href="#expense-list" className="btn btn-dark px-2 py-1 small">🗒️</a>
-  <a href="#summary" className="btn btn-dark px-3 py-1 small">📋</a>
-  <a href="#graph" className="btn btn-dark px-2 py-1 small">📊</a>
+      <div className="d-flex gap-2 justify-content-end align-items-center flex-wrap">
+  <a href="#add-expense" className="btn px-3 py-1 small btn-theme-toggle">➕</a>
+  <a href="#expense-list" className="btn px-2 py-1 small btn-theme-toggle">🗒️</a>
+  <a href="#summary" className="btn px-3 py-1 small btn-theme-toggle">📋</a>
+  <a href="#graph" className="btn px-2 py-1 small btn-theme-toggle">📊</a>
   <button
     onClick={() => document.body.classList.toggle('dark-mode')}
-    className="btn btn-outline-dark px-3 py-1 small"
+    className="btn px-3 py-1 small btn-theme-toggle"
   >
     🌓
   </button>

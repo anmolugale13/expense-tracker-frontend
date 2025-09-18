@@ -47,7 +47,18 @@ fetch(`${BASE_URL}/api/expenses`)
   color: #000000 !important;
   border-color: #ffffff !important;
 }
+/* Theme-aware navbar buttons */
+  .btn-theme-toggle {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #cccccc;
+  }
 
+  body.dark-mode .btn-theme-toggle {
+    background-color: #1e1e1e !important;
+    color: #f1f1f1 !important;
+    border-color: #444 !important;
+  }
 `;
 
 export default function App() {
