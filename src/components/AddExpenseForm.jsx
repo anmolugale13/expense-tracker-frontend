@@ -38,13 +38,13 @@ const handleSubmit = async (e) => {
         <select name="category" value={formData.category} onChange={handleChange}
           required className="form-select">
           <option value="">Category</option>
-          <option value="Food">Food</option>
-          <option value="Travel">Travel</option>
-          <option value="Shopping">Shopping</option>
-          <option value="Bills">Bills</option>
-          <option value="Entertainment">Entertainment</option>
-          <option value="Other">Other</option>
-        </select>
+  <option value="Food">🍕 Food</option>
+  <option value="Travel">✈️ Travel</option>
+  <option value="Shopping">🛍️ Shopping</option>
+  <option value="Bills">💡 Bills</option>
+  <option value="Entertainment">🎬 Entertainment</option>
+  <option value="Other">📦 Other</option>
+  </select>
       </div>
       <div className="mb-3">
         <input type="date" name="date" value={formData.date} onChange={handleChange}
