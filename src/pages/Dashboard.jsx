@@ -12,6 +12,7 @@ export default function Dashboard() {
   const [summary, setSummary] = useState([]);
   const [chartData, setChartData] = useState(null);
   const [stats, setStats] = useState({ total: 0, month: 0, avg: 0 });
+  const [chartType, setChartType] = useState('pie');
 
   const fetchExpenses = async (category = '', time = '') => {
   let query = '';
@@ -161,8 +162,17 @@ setChartData({
   <div className="col-md-6">
     <section id="graph" className="card shadow-sm">
   <div className="card-body bg-white bg-opacity-75 rounded">
-    <h2 className="h5 fw-semibold mb-3" style={{ color: '#0c2974ff' }}>📊 Chart</h2>
-    <CategoryChart chartData={chartData} />
+    <div className="d-flex justify-content-between align-items-center mb-3">
+  <h2 className="h5 fw-semibold" style={{ color: '#0c2974ff' }}>📊 Chart</h2>
+  <button
+    onClick={() => setChartType(chartType === 'pie' ? 'bar' : 'pie')}
+    className="btn btn-sm btn-outline-dark"
+    title="Toggle Chart Type"
+  >
+    📊
+  </button>
+</div>
+    <CategoryChart chartData={chartData} chartType={chartType} />
     <div className="d-flex justify-content-around text-center mt-3 flex-wrap">
       <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
         <div className="fw-bold text-secondary small">🧮Total</div>
