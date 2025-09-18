@@ -74,6 +74,10 @@ Mobile-first design with elegant nude-tone styling
 
 Styling with Bootstrap for clean UI
 
+Theme Toggle
+
+Expense Trends Graph Line chart showing monthly spending over time
+
 Clean navigation bar with emoji icons
 
 Form inputs styled with soft borders and pastel backgrounds
