@@ -148,7 +148,7 @@ setChartData({
 }}
 
     >
-      <h2 className="h5 fw-semibold mb-3" style={{ color: '#2e0236ff' }}>Add Expense</h2>
+      <h2 className="h5 fw-semibold mb-3" style={{ color: '#0c2974ff' }}>➕ Add Expense</h2>
       <AddExpenseForm onAdd={fetchExpenses} />
     </section>
   </div>
@@ -166,7 +166,7 @@ setChartData({
 }}
 
     >
-      <h2 className="h5 fw-semibold mb-3" style={{ color: '#033b09ff' }}>Summary</h2>
+      <h2 className="h5 fw-semibold mb-3" style={{ color: '#0c2974ff' }}>📋 Summary</h2>
       <SummarySection summary={summary} />
     </section>
   </div>
@@ -188,7 +188,7 @@ setChartData({
 }}
 
     >
-      <h2 className="h5 fw-semibold mb-3" style={{ color: '#071d53ff' }}>Chart</h2>
+      <h2 className="h5 fw-semibold mb-3" style={{ color: '#0c2974ff' }}>📊 Chart</h2>
       <CategoryChart chartData={chartData} />
       <div className="d-flex justify-content-around text-center mt-3 flex-wrap">
         <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
@@ -221,7 +221,7 @@ setChartData({
 
     >
       <div className="card-body bg-white bg-opacity-75 rounded">
-        <h2 className="h5 fw-semibold mb-3" style={{ color: '#3e3f07ff' }}>List</h2>
+        <h2 className="h5 fw-semibold mb-3" style={{ color: '#0c2974ff' }}>🗒️ List</h2>
         <FilterBar onFilter={fetchExpenses} />
         <div className="mt-3">
           {expenses.map((exp) => (
