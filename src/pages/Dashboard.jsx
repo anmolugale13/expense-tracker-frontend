@@ -83,61 +83,47 @@ setChartData({
   }, []);
 
   return (
-    <div className="min-vh-100 bg-light py-5 px-3">
+    <div className="min-vh-100 bg-dark py-5 px-3">
       <div className="container px-4">
         <div className="mb-5">
 
           {/* 🔹 Navbar Section */}
-          <section
-  id="navbar"
-  style={{
-  padding: "1rem",
-  borderRadius: "0.5rem",
-  marginBottom: "1.5rem",
-  backgroundColor: "#f8f9fa",
-  border: "1px solid #8bb1d6ff",
-  boxShadow: "0 2px 6px rgba(0,0,0,0.05)"
-}}
+          <section id="navbar" className="card shadow-sm mb-4">
+  <div className="card-body bg-white bg-opacity-75 rounded">
+    <div className="d-flex justify-content-between align-items-center">
+      <h1
+        className="h3 fw-bold"
+        style={{
+          background: 'linear-gradient(90deg, #00188f, #ec008c)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          fontWeight: 'bold',
+          marginBottom: '0'
+        }}
+      >
+        Expense Tracker
+      </h1>
 
->
-  <div className="d-flex justify-content-between align-items-center">
-  <h1
-  className="h3 fw-bold"
-  style={{
-    background: 'linear-gradient(90deg, #00188f, #ec008c)',
-    WebkitBackgroundClip: 'text',
-    WebkitTextFillColor: 'transparent',
-    fontWeight: 'bold',
-    marginBottom: '0'
-  }}
->
-  Expense Tracker
-</h1>
+      <div className="d-flex flex-wrap gap-2 justify-content-center" style={{ maxWidth: '100%' }}>
+        <a href="#add-expense" className="btn btn-dark px-3 py-1 small" style={{ color: '#ffffff' }}>➕</a>
+        <a href="#expense-list" className="btn btn-dark px-2 py-1 small">🗒️</a>
+        <a href="#summary" className="btn btn-dark px-3 py-1 small">📋</a>
+        <a href="#graph" className="btn btn-dark px-2 py-1 small">📊</a>
+      </div>
 
-  <div className="d-flex flex-wrap gap-2 justify-content-center" style={{ maxWidth: '100%' }}>
-    <a
-      href="#add-expense"
-      className="btn btn-dark px-3 py-1 small"
-      style={{ color: '#ffffff' }}
-    >
-      ➕
-    </a>
-    <a href="#expense-list" className="btn btn-dark px-2 py-1 small">🗒️</a>
-    <a href="#summary" className="btn btn-dark px-3 py-1 small">📋</a>
-    <a href="#graph" className="btn btn-dark px-2 py-1 small">📊</a>
-    <div className="d-flex justify-content-end mt-2">
-  <button
-    onClick={() => document.body.classList.toggle('dark-mode')}
-    className="btn btn-outline-dark btn-sm"
-  >
-    🌓 Theme
-  </button>
-</div>
-
+      <div className="d-flex justify-content-end mt-2">
+        <button
+          onClick={() => document.body.classList.toggle('dark-mode')}
+          className="btn btn-outline-dark btn-sm"
+        >
+          🌓
+        </button>
+      </div>
+    </div>
   </div>
-</div>
 
 </section>
+
 
 
           <hr className="my-4 border-secondary" />
