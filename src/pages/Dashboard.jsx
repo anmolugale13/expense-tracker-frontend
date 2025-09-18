@@ -125,6 +125,15 @@ setChartData({
     <a href="#expense-list" className="btn btn-dark px-2 py-1 small">🗒️</a>
     <a href="#summary" className="btn btn-dark px-3 py-1 small">📋</a>
     <a href="#graph" className="btn btn-dark px-2 py-1 small">📊</a>
+    <div className="d-flex justify-content-end mt-2">
+  <button
+    onClick={() => document.body.classList.toggle('dark-mode')}
+    className="btn btn-outline-dark btn-sm"
+  >
+    🌓 Theme
+  </button>
+</div>
+
   </div>
 </div>
 
