@@ -146,38 +146,25 @@ setChartData({
 <div className="row g-4 mb-4">
   {/* Add Expense */}
   <div className="col-md-6">
-    <section
-      id="add-expense"
-      style={{
-  padding: "1rem",
-  borderRadius: "0.5rem",
-  backgroundColor: "#ffffff",
-  border: "1px solid #bcd6efff",
-  boxShadow: "0 2px 6px rgba(0,0,0,0.05)"
-}}
+    <section id="add-expense" className="card shadow-sm">
+  <div className="card-body bg-white bg-opacity-75 rounded">
+    <h2 className="h5 fw-semibold mb-3" style={{ color: '#0c2974ff' }}>➕ Add Expense</h2>
+    <AddExpenseForm onAdd={fetchExpenses} />
+  </div>
+</section>
 
-    >
-      <h2 className="h5 fw-semibold mb-3" style={{ color: '#0c2974ff' }}>➕ Add Expense</h2>
-      <AddExpenseForm onAdd={fetchExpenses} />
-    </section>
+
   </div>
 
   {/* Summary */}
   <div className="col-md-6">
-    <section
-      id="summary"
-      style={{
-  padding: "1rem",
-  borderRadius: "0.5rem",
-  backgroundColor: "#ffffff",
-  border: "1px solid #bcd6efff",
-  boxShadow: "0 2px 6px rgba(0,0,0,0.05)"
-}}
+    <section id="summary" className="card shadow-sm">
+  <div className="card-body bg-white bg-opacity-75 rounded">
+    <h2 className="h5 fw-semibold mb-3" style={{ color: '#0c2974ff' }}>📋 Summary</h2>
+    <SummarySection summary={summary} />
+  </div>
+</section>
 
-    >
-      <h2 className="h5 fw-semibold mb-3" style={{ color: '#0c2974ff' }}>📋 Summary</h2>
-      <SummarySection summary={summary} />
-    </section>
   </div>
 </div>
 
@@ -186,34 +173,27 @@ setChartData({
 <div className="row g-4">
   {/* Chart */}
   <div className="col-md-6">
-    <section
-      id="graph"
-      style={{
-  padding: "1rem",
-  borderRadius: "0.5rem",
-  backgroundColor: "#ffffff",
-  border: "1px solid #bcd6efff",
-  boxShadow: "0 2px 6px rgba(0,0,0,0.05)"
-}}
-
-    >
-      <h2 className="h5 fw-semibold mb-3" style={{ color: '#0c2974ff' }}>📊 Chart</h2>
-      <CategoryChart chartData={chartData} />
-      <div className="d-flex justify-content-around text-center mt-3 flex-wrap">
-        <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
-          <div className="fw-bold text-secondary small">🧮Total</div>
-          <div className="fs-6 text-dark">₹{stats.total}</div>
-        </div>
-        <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
-          <div className="fw-bold text-secondary small">📆This Month</div>
-          <div className="fs-6 text-dark">₹{stats.month}</div>
-        </div>
-        <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
-          <div className="fw-bold text-secondary small">📊Avg/Day</div>
-          <div className="fs-6 text-dark">₹{stats.avg}</div>
-        </div>
+    <section id="graph" className="card shadow-sm">
+  <div className="card-body bg-white bg-opacity-75 rounded">
+    <h2 className="h5 fw-semibold mb-3" style={{ color: '#0c2974ff' }}>📊 Chart</h2>
+    <CategoryChart chartData={chartData} />
+    <div className="d-flex justify-content-around text-center mt-3 flex-wrap">
+      <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
+        <div className="fw-bold text-secondary small">🧮Total</div>
+        <div className="fs-6 text-dark">₹{stats.total}</div>
       </div>
-    </section>
+      <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
+        <div className="fw-bold text-secondary small">📆This Month</div>
+        <div className="fs-6 text-dark">₹{stats.month}</div>
+      </div>
+      <div className="px-3 py-2 bg-white rounded shadow-sm" style={{ minWidth: '120px' }}>
+        <div className="fw-bold text-secondary small">📊Avg/Day</div>
+        <div className="fs-6 text-dark">₹{stats.avg}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
   </div>
 
   {/* Expense List */}
