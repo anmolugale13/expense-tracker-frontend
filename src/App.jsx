@@ -38,6 +38,8 @@ fetch(`${BASE_URL}/api/expenses`)
 
 export default function App() {
   return (
+    <>
+      <style>{darkModeStyles}</style>
    <BrowserRouter>
   <div className="min-h-screen bg-[#fdf7f2] flex items-center justify-center px-4">
     <div className="w-full max-w-4xl bg-white shadow-xl rounded-xl p-6">
@@ -49,6 +51,6 @@ export default function App() {
     </div>
   </div>
 </BrowserRouter>
-
+</>
   );
 }
