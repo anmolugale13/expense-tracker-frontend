@@ -83,7 +83,7 @@ setChartData({
   }, []);
 
   return (
-    <div className="min-vh-100 bg-dark py-5 px-3">
+    <div className="min-vh-100 py-5 px-3" id="dashboard-wrapper">
       <div className="container px-4">
         <div className="mb-5">
 

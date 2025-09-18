@@ -15,6 +15,14 @@ fetch(`${BASE_URL}/api/expenses`)
     color: #f1f1f1;
   }
 
+  body.dark-mode #dashboard-wrapper {
+    background-color: #000000;
+  }
+
+  #dashboard-wrapper {
+    background-color: #ffffff;
+  }
+
   body.dark-mode section,
   body.dark-mode .card {
     background-color: #1e1e1e !important;
@@ -32,7 +40,7 @@ fetch(`${BASE_URL}/api/expenses`)
   body.dark-mode .btn {
     background-color: #333;
     color: #f1f1f1;
-    border-color: #555;
+    border-color: #555
   }
 `;
 
