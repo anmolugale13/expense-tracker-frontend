@@ -42,6 +42,12 @@ fetch(`${BASE_URL}/api/expenses`)
     color: #f1f1f1;
     border-color: #555
   }
+    body.dark-mode .btn-dark {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  border-color: #ffffff !important;
+}
+
 `;
 
 export default function App() {

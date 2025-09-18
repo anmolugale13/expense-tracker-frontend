@@ -106,20 +106,18 @@ setChartData({
       </h1>
 
       <div className="d-flex flex-wrap gap-2 justify-content-center" style={{ maxWidth: '100%' }}>
-        <a href="#add-expense" className="btn btn-dark px-3 py-1 small" style={{ color: '#ffffff' }}>➕</a>
-        <a href="#expense-list" className="btn btn-dark px-2 py-1 small">🗒️</a>
-        <a href="#summary" className="btn btn-dark px-3 py-1 small">📋</a>
-        <a href="#graph" className="btn btn-dark px-2 py-1 small">📊</a>
-      </div>
+  <a href="#add-expense" className="btn btn-dark px-3 py-1 small">➕</a>
+  <a href="#expense-list" className="btn btn-dark px-2 py-1 small">🗒️</a>
+  <a href="#summary" className="btn btn-dark px-3 py-1 small">📋</a>
+  <a href="#graph" className="btn btn-dark px-2 py-1 small">📊</a>
+  <button
+    onClick={() => document.body.classList.toggle('dark-mode')}
+    className="btn btn-outline-dark px-3 py-1 small"
+  >
+    🌓
+  </button>
+</div>
 
-      <div className="d-flex justify-content-end mt-2">
-        <button
-          onClick={() => document.body.classList.toggle('dark-mode')}
-          className="btn btn-outline-dark btn-sm"
-        >
-          🌓
-        </button>
-      </div>
     </div>
   </div>
 
