@@ -91,7 +91,7 @@ setChartData({
           <section
   id="navbar"
   style={{
-    backgroundImage: "url('https://wallpaperaccess.com/full/7194745.jpg')",
+    backgroundImage: "url('https://st.depositphotos.com/3008028/4295/i/950/depositphotos_42953103-stock-photo-pastel-white-background.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -128,7 +128,7 @@ setChartData({
     <section
       id="add-expense"
       style={{
-        backgroundImage: "url('https://wallpapers.com/images/hd/light-pink-background-bwuhuuvcaqs1owpg.jpg')",
+        backgroundImage: "url('https://t3.ftcdn.net/jpg/06/23/18/92/360_F_623189231_I7LVhjyrFapPydeRDSnB3qM0douxIa9Y.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -146,7 +146,7 @@ setChartData({
     <section
       id="summary"
       style={{
-        backgroundImage: "url('https://wallpapers.com/images/hd/light-pink-background-bwuhuuvcaqs1owpg.jpg')",
+        backgroundImage: "url('https://t3.ftcdn.net/jpg/06/23/18/92/360_F_623189231_I7LVhjyrFapPydeRDSnB3qM0douxIa9Y.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -168,7 +168,7 @@ setChartData({
     <section
       id="graph"
       style={{
-        backgroundImage: "url('https://wallpapers.com/images/hd/light-pink-background-bwuhuuvcaqs1owpg.jpg')",
+        backgroundImage: "url('https://t3.ftcdn.net/jpg/06/23/18/92/360_F_623189231_I7LVhjyrFapPydeRDSnB3qM0douxIa9Y.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -201,7 +201,7 @@ setChartData({
       id="expense-list"
       className="card shadow-sm"
       style={{
-        backgroundImage: "url('https://wallpapers.com/images/hd/light-pink-background-bwuhuuvcaqs1owpg.jpg')",
+        backgroundImage: "url('https://t3.ftcdn.net/jpg/06/23/18/92/360_F_623189231_I7LVhjyrFapPydeRDSnB3qM0douxIa9Y.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat"
