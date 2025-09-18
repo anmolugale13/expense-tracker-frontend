@@ -50,10 +50,20 @@ const handleSubmit = async (e) => {
         <input type="date" name="date" value={formData.date} onChange={handleChange}
           required className="form-control" />
       </div>
-      <button type="submit" className="btn w-100 fw-semibold"
-        style={{ backgroundColor: '#c191d1ff', color: '#ffffffff' }}>
-        Add
-      </button>
+      <button
+  type="submit"
+  className="btn w-100 fw-semibold"
+  style={{
+    backgroundImage: 'linear-gradient(90deg, #20b4caff, #e793cfff)',
+    color: '#ffffff',
+    border: 'none',
+    borderRadius: '0.375rem',
+    padding: '0.5rem 1rem'
+  }}
+>
+  Add
+</button>
+
     </form>
   );
 }
