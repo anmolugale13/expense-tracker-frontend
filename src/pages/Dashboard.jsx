@@ -91,17 +91,29 @@ setChartData({
           <section
   id="navbar"
   style={{
-    backgroundImage: "url('https://st.depositphotos.com/3008028/4295/i/950/depositphotos_42953103-stock-photo-pastel-white-background.jpg')",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundRepeat: "no-repeat",
-    padding: "1rem",
-    borderRadius: "0.5rem",
-    marginBottom: "1.5rem"
-  }}
+  padding: "1rem",
+  borderRadius: "0.5rem",
+  marginBottom: "1.5rem",
+  backgroundColor: "#f8f9fa",
+  border: "1px solid #8bb1d6ff",
+  boxShadow: "0 2px 6px rgba(0,0,0,0.05)"
+}}
+
 >
   <div className="d-flex justify-content-between align-items-center">
-  <h1 className="h3 fw-bold" style={{ color: '#0f1518ff' }}>Expense Tracker</h1>
+  <h1
+  className="h3 fw-bold"
+  style={{
+    background: 'linear-gradient(90deg, #00188f, #ec008c)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    fontWeight: 'bold',
+    marginBottom: '0'
+  }}
+>
+  Expense Tracker
+</h1>
+
   <div className="d-flex flex-wrap gap-2 justify-content-center" style={{ maxWidth: '100%' }}>
     <a
       href="#add-expense"
@@ -128,13 +140,13 @@ setChartData({
     <section
       id="add-expense"
       style={{
-        backgroundImage: "url('https://t3.ftcdn.net/jpg/06/23/18/92/360_F_623189231_I7LVhjyrFapPydeRDSnB3qM0douxIa9Y.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        padding: "1rem",
-        borderRadius: "0.5rem"
-      }}
+  padding: "1rem",
+  borderRadius: "0.5rem",
+  backgroundColor: "#ffffff",
+  border: "1px solid #bcd6efff",
+  boxShadow: "0 2px 6px rgba(0,0,0,0.05)"
+}}
+
     >
       <h2 className="h5 fw-semibold mb-3" style={{ color: '#2e0236ff' }}>Add Expense</h2>
       <AddExpenseForm onAdd={fetchExpenses} />
@@ -146,13 +158,13 @@ setChartData({
     <section
       id="summary"
       style={{
-        backgroundImage: "url('https://t3.ftcdn.net/jpg/06/23/18/92/360_F_623189231_I7LVhjyrFapPydeRDSnB3qM0douxIa9Y.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        padding: "1rem",
-        borderRadius: "0.5rem"
-      }}
+  padding: "1rem",
+  borderRadius: "0.5rem",
+  backgroundColor: "#ffffff",
+  border: "1px solid #bcd6efff",
+  boxShadow: "0 2px 6px rgba(0,0,0,0.05)"
+}}
+
     >
       <h2 className="h5 fw-semibold mb-3" style={{ color: '#033b09ff' }}>Summary</h2>
       <SummarySection summary={summary} />
@@ -168,13 +180,13 @@ setChartData({
     <section
       id="graph"
       style={{
-        backgroundImage: "url('https://t3.ftcdn.net/jpg/06/23/18/92/360_F_623189231_I7LVhjyrFapPydeRDSnB3qM0douxIa9Y.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        padding: "1rem",
-        borderRadius: "0.5rem"
-      }}
+  padding: "1rem",
+  borderRadius: "0.5rem",
+  backgroundColor: "#ffffff",
+  border: "1px solid #bcd6efff",
+  boxShadow: "0 2px 6px rgba(0,0,0,0.05)"
+}}
+
     >
       <h2 className="h5 fw-semibold mb-3" style={{ color: '#071d53ff' }}>Chart</h2>
       <CategoryChart chartData={chartData} />
@@ -201,11 +213,12 @@ setChartData({
       id="expense-list"
       className="card shadow-sm"
       style={{
-        backgroundImage: "url('https://t3.ftcdn.net/jpg/06/23/18/92/360_F_623189231_I7LVhjyrFapPydeRDSnB3qM0douxIa9Y.jpg')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat"
-      }}
+  backgroundColor: "#ffffff",
+  borderRadius: "0.5rem",
+  border: "1px solid #bcd6efff",
+  boxShadow: "0 2px 6px rgba(0,0,0,0.05)"
+}}
+
     >
       <div className="card-body bg-white bg-opacity-75 rounded">
         <h2 className="h5 fw-semibold mb-3" style={{ color: '#3e3f07ff' }}>List</h2>
