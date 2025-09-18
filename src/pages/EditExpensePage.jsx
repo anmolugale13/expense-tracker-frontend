@@ -55,7 +55,7 @@ const handleChange = (e) => {
       left: 0,
       width: '100vw',
       height: '100vh',
-      backgroundImage: "url('https://png.pngtree.com/thumb_back/fh260/background/20231016/pngtree-handcrafted-watercolor-background-abstract-light-brown-texture-with-pastel-beige-stains-image_13686186.png')",
+      backgroundImage: "url('https://img.freepik.com/free-vector/smooth-white-wave-background_52683-55288.jpg?w=2000')",
       backgroundSize: 'cover',
       backgroundPosition: 'center',
       backgroundRepeat: 'no-repeat',
