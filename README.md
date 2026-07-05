@@ -100,7 +100,6 @@ Hosted on Render as a static site. Auto-deploys on every push to master.
 
 
 
-
 ## 🌐 Environment Variables
 
 Create a `.env` file in the root of the frontend project:
